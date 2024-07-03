@@ -1,14 +1,16 @@
 
 class User {
-    constructor(name, phone, email, id) {
+    constructor(id, name, email, phone) {
         this.id = id;
         this.name = name;
         this.email = email
         this.phone = phone;
     }
 }
-const usres = [new User(1, "yiska", "aa@aa", 123)
-    , new User(2, "tammar", "bb@bb", 123)]
+const users = [
+    new User(1, "yiska", "aa@aa", 123),
+    new User(2, "tammar", "bb@bb", 123)
+];
 
 function getAllUsers() {
     return users;
@@ -45,7 +47,5 @@ function deleteUser(id) {
 }
 
 
+export { User, users, getAllUsers, getUserById, addUser, updateUser, deleteUser };
 
-module.exports = {
-    User, users, getAllUsers, getUserById, addUser, updateUser, deleteUser,
-};
