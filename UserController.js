@@ -1,4 +1,6 @@
 import { getAllUsers, getUserById, addUser, updateUser, deleteUser } from './user.module.js';
+console.log("yiska");
+
 console.log("check")
 const UserController = {
   getList: (req, res) => {
