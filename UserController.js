@@ -1,5 +1,5 @@
 import { getAllUsers, getUserById, addUser, updateUser, deleteUser } from './user.module.js';
-
+console.log("check")
 const UserController = {
   getList: (req, res) => {
     const users = getAllUsers();
@@ -16,7 +16,7 @@ const UserController = {
   add: (req, res) => {
     const { name, email, phone } = req.body;
     if (!name || !email || !phone) {
-      return res.status(400).send('Missing fields');
+      return res.status(400).send('Missing fields ');
     }
     if (!isValidEmail(email)) {
       return res.status(400).send('Invalid email format');
